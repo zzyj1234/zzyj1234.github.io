@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>智能无人系统与结构巡检研究主页</title>
+  <title>无人机智能巡检课题组</title>
 
   <style>
     :root {
@@ -27,6 +27,7 @@
       font-family: "Arial Black", "Microsoft YaHei UI", "SimHei", sans-serif;
       background: #f5f0e6;
       color: #1f1f1f;
+      font-size: 19px;
     }
 
     .hero {
@@ -183,7 +184,7 @@
       margin: 6px 14px;
       color: var(--constructivist-cream);
       text-decoration: none;
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 900;
       letter-spacing: 0.06em;
     }
@@ -193,9 +194,9 @@
     }
 
     main {
-      max-width: 1040px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 56px 22px 80px;
+      padding: 62px 24px 86px;
       font-family: "Microsoft YaHei", Arial, sans-serif;
       line-height: 1.9;
     }
@@ -204,7 +205,7 @@
       margin-bottom: 54px;
       background: rgba(255, 255, 255, 0.68);
       border-left: 10px solid var(--constructivist-red);
-      padding: 28px 32px;
+      padding: 34px 40px;
       box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.08);
     }
 
@@ -212,7 +213,7 @@
       margin: 0 0 18px;
       font-family: Impact, "Arial Black", "Microsoft YaHei UI", sans-serif;
       color: var(--constructivist-black);
-      font-size: 30px;
+      font-size: 40px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
@@ -228,6 +229,238 @@
 
     li {
       margin: 8px 0;
+      font-size: 18px;
+    }
+
+    .lead-text {
+      margin: 0 0 20px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .fact-grid,
+    .project-grid,
+    .profile-grid,
+    .publication-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .publication-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .fact-card,
+    .project-card,
+    .profile-card,
+    .publication-card {
+      background: rgba(242, 232, 207, 0.62);
+      border: 3px solid var(--constructivist-black);
+      box-shadow: 7px 7px 0 rgba(193, 18, 31, 0.86);
+      overflow: hidden;
+    }
+
+    .fact-card {
+      padding: 18px;
+    }
+
+    .fact-card strong,
+    .project-card strong,
+    .profile-card strong,
+    .publication-card strong {
+      display: block;
+      color: var(--constructivist-red);
+      font-family: Impact, "Arial Black", "Microsoft YaHei UI", sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+    }
+
+    .fact-card span,
+    .project-card p,
+    .profile-card p,
+    .publication-card p {
+      display: block;
+      margin-top: 8px;
+      color: #272727;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .research-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .research-list li {
+      margin: 0;
+      min-height: 240px;
+      padding: 20px;
+      background: var(--constructivist-black);
+      color: var(--constructivist-cream);
+      border-top: 10px solid var(--constructivist-red);
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    .research-list strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--constructivist-cream);
+      font-size: 26px;
+      line-height: 1.35;
+    }
+
+    .about-work {
+      margin-top: 22px;
+      padding: 20px 24px;
+      background: var(--constructivist-black);
+      color: var(--constructivist-cream);
+      border-left: 10px solid var(--constructivist-red);
+    }
+
+    .about-work h3 {
+      margin: 0 0 8px;
+      font-family: Impact, "Arial Black", "Microsoft YaHei UI", sans-serif;
+      font-size: 29px;
+      letter-spacing: 0.04em;
+    }
+
+    .about-work ul {
+      margin: 0;
+    }
+
+    .research-photo {
+      margin-top: 22px;
+      border: 3px solid var(--constructivist-black);
+      box-shadow: 8px 8px 0 rgba(193, 18, 31, 0.86);
+      background: var(--constructivist-black);
+    }
+
+    .research-photo img {
+      display: block;
+      width: 100%;
+      max-height: 430px;
+      object-fit: cover;
+    }
+
+    .image-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .image-strip img,
+    .project-card img,
+    .profile-card img,
+    .publication-card img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .image-strip img {
+      height: 150px;
+      border: 3px solid var(--constructivist-black);
+    }
+
+    .project-card img {
+      height: 190px;
+    }
+
+    .publication-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .publication-card > div:not(.dataset-gallery) {
+      min-height: 210px;
+      padding: 18px;
+    }
+
+    .publication-card img {
+      height: 220px;
+      border-top: 3px solid var(--constructivist-black);
+    }
+
+    .publication-card img.focus-top {
+      object-position: 35% 8%;
+    }
+
+    .dataset-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 3px solid var(--constructivist-black);
+    }
+
+    .dataset-gallery img {
+      height: 150px;
+      border-top: 0;
+      border-right: 3px solid var(--constructivist-black);
+      border-bottom: 3px solid var(--constructivist-black);
+    }
+
+    .dataset-gallery img:nth-child(2n) {
+      border-right: 0;
+    }
+
+    .project-card div {
+      padding: 16px;
+    }
+
+    .profile-card div {
+      padding: 26px;
+    }
+
+    .profile-card p {
+      font-size: 20px;
+    }
+
+    .collaboration-list {
+      margin-top: 24px;
+      padding: 22px 26px 22px 34px;
+      background: var(--constructivist-black);
+      color: var(--constructivist-cream);
+      border-left: 10px solid var(--constructivist-red);
+      box-shadow: 7px 7px 0 rgba(193, 18, 31, 0.86);
+    }
+
+    .collaboration-list li {
+      margin: 10px 0;
+      font-size: 19px;
+    }
+
+    .project-grid.hardware {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .profile-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .profile-card {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      align-items: stretch;
+    }
+
+    .profile-card img {
+      height: 100%;
+      min-height: 300px;
+    }
+
+    .equipment-list {
+      columns: 2;
+      margin-top: 18px;
+      padding-left: 24px;
     }
 
     footer {
@@ -257,6 +490,21 @@
       section {
         padding: 22px 20px;
       }
+
+      .fact-grid,
+      .project-grid,
+      .profile-grid,
+      .research-list,
+      .image-strip,
+      .publication-grid,
+      .project-grid.hardware,
+      .profile-card {
+        grid-template-columns: 1fr;
+      }
+
+      .equipment-list {
+        columns: 1;
+      }
     }
   </style>
 </head>
@@ -268,10 +516,10 @@
 
     <div class="hero-content">
       <h1 class="title-en">UAV INSPECTION LAB</h1>
-      <h2 class="title-cn">智能无人系统与结构巡检研究主页</h2>
+      <h2 class="title-cn">无人机智能巡检课题组</h2>
 
       <p class="subtitle">
-        Unmanned Aerial Systems · Structural Inspection · Deep Learning
+        3D Reconstruction · Path Planning · Defect Diagnosis
       </p>
 
       <div class="enter-group">
@@ -284,8 +532,8 @@
   <nav>
     <a href="#about">课题组简介</a>
     <a href="#research">研究方向</a>
-    <a href="#publications">论文成果</a>
-    <a href="#projects">项目展示</a>
+    <a href="#publications">成果展示</a>
+    <a href="#projects">硬件资源</a>
     <a href="#personal">个人主页</a>
   </nav>
 
@@ -293,50 +541,171 @@
 
     <section id="about">
       <h2><span>01</span>About</h2>
-      <p>
-        本主页用于展示课题组在无人机自主巡检、深度学习视觉检测、道路与桥梁病害识别、
-        智能巡检系统与可持续计算等方向的研究工作。
+      <p class="lead-text">
+        无人机智能巡检课题组面向道路、桥梁、工业装备等真实工程场景，研究无人机自主巡检、三维重建、路径规划、负载控制、缺陷检测与故障诊断方法。
       </p>
+      <p>
+        课题组师从长安大学工程机械学院夏晓华副教授，围绕交通基础设施智能运维中的“看得清、飞得稳、判得准、落得下”问题开展研究。现有工作覆盖无人机外业数据采集、桥梁点云重建、道路病害图像识别、视觉异常检测、巡检标准规范与智能检测系统构建。
+      </p>
+      <div class="fact-grid">
+        <div class="fact-card">
+          <strong>工程场景</strong>
+          <span>高速公路路面、桥梁结构、工业设备与复杂户外巡检环境。</span>
+        </div>
+        <div class="fact-card">
+          <strong>核心方法</strong>
+          <span>无人机控制、点云建模、机器视觉、深度学习与多源感知融合。</span>
+        </div>
+        <div class="fact-card">
+          <strong>应用目标</strong>
+          <span>形成从数据采集、空间定位、缺陷识别到报告生成的智能巡检流程。</span>
+        </div>
+      </div>
+      <div class="about-work">
+        <h3>现有工作</h3>
+        <ul>
+          <li>无人机自主巡检与路径规划</li>
+          <li>道路与桥梁病害图像识别</li>
+          <li>裂缝检测与语义分割模型</li>
+          <li>智能巡检装备与数据集构建</li>
+          <li>AI 模型能耗、碳排放与可持续部署</li>
+        </ul>
+      </div>
     </section>
 
     <section id="research">
       <h2><span>02</span>Research</h2>
-      <ul>
-        <li>无人机自主巡检与路径规划</li>
-        <li>道路与桥梁病害图像识别</li>
-        <li>裂缝检测与语义分割模型</li>
-        <li>智能巡检装备与数据集构建</li>
-        <li>AI 模型能耗、碳排放与可持续部署</li>
+      <ul class="research-list">
+        <li><strong>三维重建与感知：</strong>围绕桥梁、道路和复杂工程场景，开展点云重建、多源感知、结构场景建模与目标定位研究，为无人机巡检提供高精度空间理解能力。</li>
+        <li><strong>路径规划与负载控制：</strong>面向弱 GPS、复杂地形和多载荷巡检任务，研究无人机自主路径规划、位姿保持、载荷协同控制与安全作业策略。</li>
+        <li><strong>缺陷检测与故障诊断：</strong>结合深度学习、视觉异常检测和语义分割方法，开展道路病害、桥梁缺陷和工业设备异常的自动识别、定位与诊断。</li>
       </ul>
+      <div class="research-photo">
+        <img src="images/uav-road-inspection.jpg" alt="无人机道路巡检场景">
+      </div>
     </section>
 
     <section id="publications">
       <h2><span>03</span>Publications</h2>
-      <p>
-        后续可在此处添加期刊论文、会议论文、数据论文、专利成果和代表性研究工作。
-      </p>
+      <div class="publication-grid">
+        <div class="publication-card">
+          <div>
+            <strong>道路巡检无人机研究</strong>
+            <p>围绕弱 GPS、弱通信条件下的无人机路面自动巡检，已撰写论文《Lateral positioning method for unmanned aerial vehicle automatic inspecting road》，投稿至《Journal of Field Robotics》。</p>
+          </div>
+          <img src="images/uav-road-inspection.jpg" alt="无人机高速公路路面巡检">
+        </div>
+        <div class="publication-card">
+          <div>
+            <strong>清洁生产方向成果</strong>
+            <p>已有一区 Top 期刊 Journal of Cleaner Production 相关论文成果，为课题组交叉研究积累方法基础。</p>
+          </div>
+          <img class="focus-top" src="images/jclp-cover.jpg" alt="Journal of Cleaner Production 封面成果">
+        </div>
+        <div class="publication-card">
+          <div>
+            <strong>智能制造竞赛成果</strong>
+            <p>基于 Dinomaly 的多元特征融合视觉异常检测模型，在 M2AD 场景中提升故障诊断表现，获 2025 年中国大学生机械工程创新创意大赛智能制造赛国家二等奖。</p>
+          </div>
+          <img src="images/anomaly-detection-result.jpg" alt="视觉异常检测热力图结果">
+        </div>
+        <div class="publication-card">
+          <div>
+            <strong>交通创新竞赛成果</strong>
+            <p>在桥梁病害检测、定位、无人机路径规划与检测报告自动生成任务中，承担点云三维重建、巡检路径规划与图像拼接工作，团队获国际优秀奖。</p>
+          </div>
+          <img src="images/bridge-path-planning.jpg" alt="桥梁点云路径规划">
+        </div>
+        <div class="publication-card">
+          <div>
+            <strong>巡检规范制定</strong>
+            <p>参与陕西省地方标准《无人机巡检高速公路路面病害技术规范》相关起草工作，围绕巡检平台、操作要求、应急预案、数据采集质量与数据存储格式等内容形成规范化支撑。</p>
+          </div>
+          <img src="images/rule.jpg" alt="无人机巡检高速公路路面病害技术规范资料">
+        </div>
+        <div class="publication-card">
+          <div>
+            <strong>道路病害数据集建立</strong>
+            <p>正在与其他课题组联合构建道路检测病害数据集，围绕路面裂缝、坑槽、破损等典型目标开展采集、筛选、标注与质量控制，为检测模型训练和工程验证提供数据基础。</p>
+          </div>
+          <div class="dataset-gallery" aria-label="道路病害数据样例">
+            <img src="images/road-disease-01.jpg" alt="道路病害数据样例 1">
+            <img src="images/road-disease-02.jpg" alt="道路病害数据样例 2">
+            <img src="images/road-disease-03.jpg" alt="道路病害数据样例 3">
+            <img src="images/road-disease-04.jpg" alt="道路病害数据样例 4">
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
-      <h2><span>04</span>Projects</h2>
-      <p>
-        后续可在此处展示无人机桥梁巡检、道路检测车数据集、结构病害识别、
-        智能巡检装备与算法系统等项目。
+      <h2><span>04</span>Hardware Resources</h2>
+      <p class="lead-text">
+        课题组现有无人机平台、科研无人机与高算力服务器，可支撑外业采集、三维建模、模型训练、负载控制实验和工程验证。
       </p>
+      <div class="project-grid hardware">
+        <div class="project-card">
+          <img src="images/uav-m300rtk.jpg" alt="M300 RTK 无人机平台">
+          <div>
+            <strong>M300 RTK</strong>
+            <p>用于道路、桥梁等场景的数据采集与高精度巡检任务，可搭配视觉与测绘载荷开展外业验证。</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/p600-uav.jpg" alt="P600 科研无人机">
+          <div>
+            <strong>P600 科研无人机</strong>
+            <p>用于自主控制、负载协同和巡检策略验证。</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/z410-uav.jpg" alt="Z410 科研无人机">
+          <div>
+            <strong>Z410 科研无人机</strong>
+            <p>服务多源感知、算法测试与复杂巡检任务验证。</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/server.jpg" alt="高算力服务器">
+          <div>
+            <strong>高算力服务器</strong>
+            <p>支撑深度学习训练、三维重建实验、模型复现与系统部署测试。</p>
+          </div>
+        </div>
+      </div>
+      <ul class="collaboration-list">
+        <li>与中交二公局等工程单位保持应用合作，面向真实道路、桥梁和基础设施运维场景开展需求牵引、外业验证与成果落地。</li>
+        <li>与芯语科技（宇树西北总代理）等企业资源形成联动，为机器人平台、具身智能验证和无人系统集成提供设备与工程接口支撑。</li>
+        <li>依托视觉仿生感知及类脑智能、智能产线检测、机器人具身智能、无人机智能巡检、挖掘机智能化、压路机智能化、基础设施智能运维等方向的协同力量，形成“感知-控制-装备-场景-运维”的交叉支撑体系。</li>
+      </ul>
     </section>
 
     <section id="personal">
       <h2><span>05</span>Personal Page</h2>
-      <p>
-        后续可在此处添加个人简介、教育经历、研究方向、代表性论文、代码仓库、
-        数据集链接和联系方式。
-      </p>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <img src="images/teacherprofile.jpg" alt="夏晓华副教授">
+          <div>
+            <strong>夏晓华 博士生导师</strong>
+            <p>工学博士，毕业于西安交通大学机械工程专业，现为长安大学工程机械学院博士研究生导师、国际研究生导师，智能制造与机器人系主任、质量控制研究所所长、陕西省高速公路施工机械重点实验室副主任。长期从事机器视觉智能感知与智能制造、机器人具身智能与无人自主作业装备、基础设施智能运维等方向研究。</p>
+            <p>科研方面，主持国家自然科学基金、陕西省重点研发计划等科技项目 20 余项，在 Journal of Cleaner Production、Signal Processing、Measurement、Pattern Recognition Letters、中国公路学报等期刊和会议发表论文 70 余篇，授权发明专利 16 项、实用新型专利 22 项，登记软件著作权 14 项，完成科技成果转化 21 项。指导学生在人工智能算法、智能制造、未来飞行器、机械创新设计等竞赛中多次获得全国奖项。</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img src="images/myprofile.jpg" alt="个人主页头像">
+          <div>
+            <strong>周志垚佳 博士在读</strong>
+            <p>主要研究道路巡检无人机及路面病害自动定位与智能分析，聚焦弱 GPS、弱通信场景下的无人机自主巡检、视觉定位与路径规划，以及面向路面病害的图像采集、数据集构建和智能识别。相关成果包括道路巡检无人机论文工作、陕西省地方标准《无人机巡检高速公路路面病害技术规范》起草参与、道路检测病害数据集构建，以及桥梁巡检赛事中的点云重建与路径规划工作。</p>
+            <p>在智能制造方向，曾带领团队提出基于 Dinomaly 的多元特征融合视觉异常检测模型，结合 CNN 与 Transformer 特征优势提升无监督故障诊断表现，获中国大学生机械工程创新创意大赛智能制造赛国家二等奖。</p>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <footer>
-    © 2026 UAV Inspection Lab · 智能无人系统与结构巡检研究主页
+    © 2026 UAV Inspection Lab · 无人机智能巡检课题组
   </footer>
 
 </body>
