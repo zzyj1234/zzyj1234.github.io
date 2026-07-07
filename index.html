@@ -20,6 +20,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 96px;
     }
 
     body {
@@ -33,7 +34,7 @@
     .hero {
       min-height: 100vh;
       position: relative;
-      background-image: url("images/page.png");
+      background-image: url("images/web/page-hero.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -196,12 +197,13 @@
     main {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 62px 24px 86px;
+      padding: 62px 24px 220px;
       font-family: "Microsoft YaHei", Arial, sans-serif;
       line-height: 1.9;
     }
 
     section {
+      scroll-margin-top: 96px;
       margin-bottom: 54px;
       background: rgba(255, 255, 255, 0.68);
       border-left: 10px solid var(--constructivist-red);
@@ -581,7 +583,7 @@
         <li><strong>缺陷检测与故障诊断：</strong>结合深度学习、视觉异常检测和语义分割方法，开展道路病害、桥梁缺陷和工业设备异常的自动识别、定位与诊断。</li>
       </ul>
       <div class="research-photo">
-        <img src="images/uav-road-inspection.jpg" alt="无人机道路巡检场景">
+        <img src="images/web/uav-road-inspection-wide.jpg" alt="无人机道路巡检场景" width="1280" height="520" loading="lazy">
       </div>
     </section>
 
@@ -593,35 +595,35 @@
             <strong>道路巡检无人机研究</strong>
             <p>围绕弱 GPS、弱通信条件下的无人机路面自动巡检，已撰写论文《Lateral positioning method for unmanned aerial vehicle automatic inspecting road》，投稿至《Journal of Field Robotics》。</p>
           </div>
-          <img src="images/uav-road-inspection.jpg" alt="无人机高速公路路面巡检">
+          <img src="images/web/uav-road-inspection-card.jpg" alt="无人机高速公路路面巡检" width="900" height="360" loading="lazy">
         </div>
         <div class="publication-card">
           <div>
             <strong>清洁生产方向成果</strong>
             <p>已有一区 Top 期刊 Journal of Cleaner Production 相关论文成果，为课题组交叉研究积累方法基础。</p>
           </div>
-          <img class="focus-top" src="images/jclp-cover.jpg" alt="Journal of Cleaner Production 封面成果">
+          <img class="focus-top" src="images/web/jclp-cover-card.jpg" alt="Journal of Cleaner Production 封面成果" width="900" height="360" loading="lazy">
         </div>
         <div class="publication-card">
           <div>
             <strong>智能制造竞赛成果</strong>
             <p>基于 Dinomaly 的多元特征融合视觉异常检测模型，在 M2AD 场景中提升故障诊断表现，获 2025 年中国大学生机械工程创新创意大赛智能制造赛国家二等奖。</p>
           </div>
-          <img src="images/anomaly-detection-result.jpg" alt="视觉异常检测热力图结果">
+          <img src="images/web/anomaly-detection-card.jpg" alt="视觉异常检测热力图结果" width="900" height="360" loading="lazy">
         </div>
         <div class="publication-card">
           <div>
             <strong>交通创新竞赛成果</strong>
             <p>在桥梁病害检测、定位、无人机路径规划与检测报告自动生成任务中，承担点云三维重建、巡检路径规划与图像拼接工作，团队获国际优秀奖。</p>
           </div>
-          <img src="images/bridge-path-planning.jpg" alt="桥梁点云路径规划">
+          <img src="images/web/bridge-path-planning-card.jpg" alt="桥梁点云路径规划" width="900" height="360" loading="lazy">
         </div>
         <div class="publication-card">
           <div>
             <strong>巡检规范制定</strong>
             <p>参与陕西省地方标准《无人机巡检高速公路路面病害技术规范》相关起草工作，围绕巡检平台、操作要求、应急预案、数据采集质量与数据存储格式等内容形成规范化支撑。</p>
           </div>
-          <img src="images/rule.jpg" alt="无人机巡检高速公路路面病害技术规范资料">
+          <img src="images/web/rule-card.jpg" alt="无人机巡检高速公路路面病害技术规范资料" width="900" height="360" loading="lazy">
         </div>
         <div class="publication-card">
           <div>
@@ -629,10 +631,10 @@
             <p>正在与其他课题组联合构建道路检测病害数据集，围绕路面裂缝、坑槽、破损等典型目标开展采集、筛选、标注与质量控制，为检测模型训练和工程验证提供数据基础。</p>
           </div>
           <div class="dataset-gallery" aria-label="道路病害数据样例">
-            <img src="images/road-disease-01.jpg" alt="道路病害数据样例 1">
-            <img src="images/road-disease-02.jpg" alt="道路病害数据样例 2">
-            <img src="images/road-disease-03.jpg" alt="道路病害数据样例 3">
-            <img src="images/road-disease-04.jpg" alt="道路病害数据样例 4">
+            <img src="images/web/road-disease-01-card.jpg" alt="道路病害数据样例 1" width="480" height="300" loading="lazy">
+            <img src="images/web/road-disease-02-card.jpg" alt="道路病害数据样例 2" width="480" height="300" loading="lazy">
+            <img src="images/web/road-disease-03-card.jpg" alt="道路病害数据样例 3" width="480" height="300" loading="lazy">
+            <img src="images/web/road-disease-04-card.jpg" alt="道路病害数据样例 4" width="480" height="300" loading="lazy">
           </div>
         </div>
       </div>
@@ -645,28 +647,28 @@
       </p>
       <div class="project-grid hardware">
         <div class="project-card">
-          <img src="images/uav-m300rtk.jpg" alt="M300 RTK 无人机平台">
+          <img src="images/web/uav-m300rtk-hardware.jpg" alt="M300 RTK 无人机平台" width="560" height="380" loading="lazy">
           <div>
             <strong>M300 RTK</strong>
             <p>用于道路、桥梁等场景的数据采集与高精度巡检任务，可搭配视觉与测绘载荷开展外业验证。</p>
           </div>
         </div>
         <div class="project-card">
-          <img src="images/p600-uav.jpg" alt="P600 科研无人机">
+          <img src="images/web/p600-uav-hardware.jpg" alt="P600 科研无人机" width="560" height="380" loading="lazy">
           <div>
             <strong>P600 科研无人机</strong>
             <p>用于自主控制、负载协同和巡检策略验证。</p>
           </div>
         </div>
         <div class="project-card">
-          <img src="images/z410-uav.jpg" alt="Z410 科研无人机">
+          <img src="images/web/z410-uav-hardware.jpg" alt="Z410 科研无人机" width="560" height="380" loading="lazy">
           <div>
             <strong>Z410 科研无人机</strong>
             <p>服务多源感知、算法测试与复杂巡检任务验证。</p>
           </div>
         </div>
         <div class="project-card">
-          <img src="images/server.jpg" alt="高算力服务器">
+          <img src="images/web/server-hardware.jpg" alt="高算力服务器" width="560" height="380" loading="lazy">
           <div>
             <strong>高算力服务器</strong>
             <p>支撑深度学习训练、三维重建实验、模型复现与系统部署测试。</p>
@@ -684,7 +686,7 @@
       <h2><span>05</span>Personal Page</h2>
       <div class="profile-grid">
         <div class="profile-card">
-          <img src="images/teacherprofile.jpg" alt="夏晓华副教授">
+          <img src="images/web/teacherprofile-page.jpg" alt="夏晓华副教授" width="560" height="760" loading="lazy">
           <div>
             <strong>夏晓华 博士生导师</strong>
             <p>工学博士，毕业于西安交通大学机械工程专业，现为长安大学工程机械学院博士研究生导师、国际研究生导师，智能制造与机器人系主任、质量控制研究所所长、陕西省高速公路施工机械重点实验室副主任。长期从事机器视觉智能感知与智能制造、机器人具身智能与无人自主作业装备、基础设施智能运维等方向研究。</p>
@@ -692,7 +694,7 @@
           </div>
         </div>
         <div class="profile-card">
-          <img src="images/myprofile.jpg" alt="个人主页头像">
+          <img src="images/web/myprofile-page.jpg" alt="个人主页头像" width="560" height="760" loading="lazy">
           <div>
             <strong>周志垚佳 博士在读</strong>
             <p>主要研究道路巡检无人机及路面病害自动定位与智能分析，聚焦弱 GPS、弱通信场景下的无人机自主巡检、视觉定位与路径规划，以及面向路面病害的图像采集、数据集构建和智能识别。相关成果包括道路巡检无人机论文工作、陕西省地方标准《无人机巡检高速公路路面病害技术规范》起草参与、道路检测病害数据集构建，以及桥梁巡检赛事中的点云重建与路径规划工作。</p>
