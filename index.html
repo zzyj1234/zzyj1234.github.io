@@ -1,41 +1,285 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>智能无人系统与结构巡检研究主页</title>
+
   <style>
+    :root {
+      --constructivist-red: #c1121f;
+      --constructivist-red-dark: #8f0d17;
+      --constructivist-cream: #f2e8cf;
+      --constructivist-black: #111111;
+      --constructivist-gray: #202020;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, "Microsoft YaHei", sans-serif;
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.8;
-      color: #222;
+      margin: 0;
+      font-family: "Arial Black", "Microsoft YaHei UI", "SimHei", sans-serif;
+      background: #f5f0e6;
+      color: #1f1f1f;
     }
-    h1, h2 {
-      color: #1f2937;
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      background-image: url("images/page.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
     }
-    nav a {
-      margin-right: 18px;
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.72) 0%,
+          rgba(0, 0, 0, 0.42) 45%,
+          rgba(0, 0, 0, 0.22) 100%
+        );
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 70vw;
+      height: 32vh;
+      left: -15vw;
+      bottom: -8vh;
+      background: rgba(193, 18, 31, 0.78);
+      transform: rotate(-10deg);
+      z-index: 2;
+      mix-blend-mode: multiply;
+    }
+
+    .diagonal-block {
+      position: absolute;
+      right: -12vw;
+      top: 10vh;
+      width: 46vw;
+      height: 18vh;
+      background: rgba(242, 232, 207, 0.18);
+      transform: rotate(-18deg);
+      z-index: 2;
+      border: 3px solid rgba(242, 232, 207, 0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1100px;
+      padding: 36px 28px;
+    }
+
+    .title-en {
+      margin: 0;
+      color: var(--constructivist-red);
+      font-family: Impact, "Arial Black", "Microsoft YaHei UI", sans-serif;
+      font-size: clamp(42px, 8vw, 96px);
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-shadow:
+        4px 4px 0 var(--constructivist-black),
+        8px 8px 0 rgba(0, 0, 0, 0.32);
+    }
+
+    .title-cn {
+      margin: 18px 0 0;
+      color: var(--constructivist-cream);
+      font-family: "Arial Black", "Microsoft YaHei UI", "SimHei", sans-serif;
+      font-size: clamp(22px, 3.2vw, 42px);
+      line-height: 1.2;
+      letter-spacing: 0.08em;
+      font-weight: 900;
+      text-shadow:
+        3px 3px 0 var(--constructivist-black),
+        6px 6px 0 rgba(0, 0, 0, 0.28);
+    }
+
+    .subtitle {
+      margin: 24px auto 0;
+      color: rgba(242, 232, 207, 0.9);
+      font-family: "Arial", "Microsoft YaHei", sans-serif;
+      font-size: clamp(14px, 1.7vw, 20px);
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .enter-group {
+      margin-top: 42px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .enter-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      padding: 14px 28px;
+      color: var(--constructivist-cream);
+      background: var(--constructivist-red);
+      border: 3px solid var(--constructivist-cream);
       text-decoration: none;
-      color: #2563eb;
+      font-family: Impact, "Arial Black", "Microsoft YaHei UI", sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 8px 8px 0 var(--constructivist-black);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
     }
-    .section {
-      margin-top: 36px;
+
+    .enter-button:hover {
+      transform: translate(4px, 4px);
+      box-shadow: 4px 4px 0 var(--constructivist-black);
+      background: var(--constructivist-red-dark);
     }
+
+    .enter-button.secondary {
+      color: var(--constructivist-red);
+      background: var(--constructivist-cream);
+      border-color: var(--constructivist-red);
+    }
+
+    .enter-button.secondary:hover {
+      background: #fff4d6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--constructivist-black);
+      border-bottom: 6px solid var(--constructivist-red);
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 6px 14px;
+      color: var(--constructivist-cream);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+    }
+
+    nav a:hover {
+      color: var(--constructivist-red);
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 56px 22px 80px;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.9;
+    }
+
+    section {
+      margin-bottom: 54px;
+      background: rgba(255, 255, 255, 0.68);
+      border-left: 10px solid var(--constructivist-red);
+      padding: 28px 32px;
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-family: Impact, "Arial Black", "Microsoft YaHei UI", sans-serif;
+      color: var(--constructivist-black);
+      font-size: 30px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h2 span {
+      color: var(--constructivist-red);
+      margin-right: 8px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
     footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #666;
+      background: var(--constructivist-black);
+      color: var(--constructivist-cream);
+      text-align: center;
+      padding: 28px 20px;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
       font-size: 14px;
+      border-top: 8px solid var(--constructivist-red);
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        background-position: center;
+      }
+
+      .hero-content {
+        padding: 24px 12px;
+      }
+
+      .enter-button {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      section {
+        padding: 22px 20px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>智能无人系统与结构巡检研究主页</h1>
+
+  <header class="hero">
+    <div class="diagonal-block"></div>
+
+    <div class="hero-content">
+      <h1 class="title-en">UAV INSPECTION LAB</h1>
+      <h2 class="title-cn">智能无人系统与结构巡检研究主页</h2>
+
+      <p class="subtitle">
+        Unmanned Aerial Systems · Structural Inspection · Deep Learning
+      </p>
+
+      <div class="enter-group">
+        <a class="enter-button" href="#about">ENTER SITE</a>
+        <a class="enter-button secondary" href="#personal">个人主页</a>
+      </div>
+    </div>
+  </header>
 
   <nav>
     <a href="#about">课题组简介</a>
@@ -45,44 +289,55 @@
     <a href="#personal">个人主页</a>
   </nav>
 
-  <div class="section" id="about">
-    <h2>课题组简介</h2>
-    <p>
-      本主页用于展示课题组在无人机自主巡检、深度学习视觉检测、道路与桥梁病害识别、
-      智能巡检系统与可持续计算等方向的研究工作。
-    </p>
-  </div>
+  <main>
 
-  <div class="section" id="research">
-    <h2>研究方向</h2>
-    <ul>
-      <li>无人机自主巡检与路径规划</li>
-      <li>道路与桥梁病害图像识别</li>
-      <li>裂缝检测与语义分割模型</li>
-      <li>智能巡检装备与数据集构建</li>
-      <li>AI 模型能耗、碳排放与可持续部署</li>
-    </ul>
-  </div>
+    <section id="about">
+      <h2><span>01</span>About</h2>
+      <p>
+        本主页用于展示课题组在无人机自主巡检、深度学习视觉检测、道路与桥梁病害识别、
+        智能巡检系统与可持续计算等方向的研究工作。
+      </p>
+    </section>
 
-  <div class="section" id="publications">
-    <h2>论文成果</h2>
-    <p>后续可在此处添加论文、会议论文、数据论文和专利成果。</p>
-  </div>
+    <section id="research">
+      <h2><span>02</span>Research</h2>
+      <ul>
+        <li>无人机自主巡检与路径规划</li>
+        <li>道路与桥梁病害图像识别</li>
+        <li>裂缝检测与语义分割模型</li>
+        <li>智能巡检装备与数据集构建</li>
+        <li>AI 模型能耗、碳排放与可持续部署</li>
+      </ul>
+    </section>
 
-  <div class="section" id="projects">
-    <h2>项目展示</h2>
-    <p>后续可在此处展示无人机巡检、道路检测车数据集、桥梁病害识别等项目。</p>
-  </div>
+    <section id="publications">
+      <h2><span>03</span>Publications</h2>
+      <p>
+        后续可在此处添加期刊论文、会议论文、数据论文、专利成果和代表性研究工作。
+      </p>
+    </section>
 
-  <div class="section" id="personal">
-    <h2>个人主页</h2>
-    <p>
-      后续可在此处添加个人简介、教育经历、研究方向、代表性论文、代码仓库和联系方式。
-    </p>
-  </div>
+    <section id="projects">
+      <h2><span>04</span>Projects</h2>
+      <p>
+        后续可在此处展示无人机桥梁巡检、道路检测车数据集、结构病害识别、
+        智能巡检装备与算法系统等项目。
+      </p>
+    </section>
+
+    <section id="personal">
+      <h2><span>05</span>Personal Page</h2>
+      <p>
+        后续可在此处添加个人简介、教育经历、研究方向、代表性论文、代码仓库、
+        数据集链接和联系方式。
+      </p>
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2026 智能无人系统与结构巡检研究主页</p>
+    © 2026 UAV Inspection Lab · 智能无人系统与结构巡检研究主页
   </footer>
+
 </body>
 </html>
